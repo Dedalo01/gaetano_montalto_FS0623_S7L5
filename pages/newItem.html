@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDAZON | Create New Item</title>
+
+    <!-- stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"
+        defer></script>
+    <script src="../assets/js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">CRUDAZON</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="new-item-page" class="container my-5">
+        <h1>Item</h1>
+        <form id="create-item-form" class="mb-4">
+            <div class="mb-3"> <label for="name" class="form-label">Insert Name:</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Nokia 3310" required>
+            </div>
+            <div class="mb-3"> <label for="description" class="form-label">Insert Short Description:</label>
+                <input type="text" class="form-control" name="description" id="description"
+                    placeholder="Indestructible cellphone" required>
+            </div>
+            <div class="mb-3"> <label for="brand" class="form-label">Insert Brand:</label>
+                <input type="text" class="form-control" name="brand" id="brand" placeholder="Nokia" required>
+            </div>
+            <div class="mb-3"> <label for="url" class="form-label">Insert Image Url:</label>
+                <input type="text" class="form-control" name="url" id="url" placeholder="http://example.com/image.jpg"
+                    required>
+            </div>
+            <div class="mb-3"> <label for="price" class="form-label">Insert Price:</label>
+                <input type="number" class="form-control" name="price" id="price" placeholder="99" required>
+            </div>
+
+            <!-- TODO rimetti a reset se non funziona il confirmAction in js -->
+            <button type="button" class="btn btn-warning m-2" id="form-reset-btn">Reset All Fields</button>
+            <button type="submit" class="btn btn-success m-2" id="form-create-btn">Create New Item</button>
+            <button type="submit" class="btn btn-success m-2 d-none " id="form-modify-btn">Save Changes</button>
+            <button type="button" class="btn btn-danger m-2 d-none" id="form-delete-btn">Delete Item</button>
+        </form>
+
+        <div id="confirm-box" class="d-none my-4">
+            <div class="bg-danger-subtle border border-danger border-4 my-4 p-3 rounded">
+                <h3></h3>
+                <p></p>
+                <button type="button" id="continue-btn" class="btn btn-danger">Continue</button>
+                <button type="button" id="cancel-btn" class="btn btn-light">Cancel</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="d-flex align-items-center justify-content-center p-5 bg-dark">
+        <div>
+            <p class="text-light">&copy;2023 CRUDAZON - All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
